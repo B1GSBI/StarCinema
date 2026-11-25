@@ -1,0 +1,93 @@
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
+}
+
+footer {
+  margin-top: 80px;
+}
+
+/* Відступ під фіксованою навігаційною панеллю */
+.page-top {
+  padding-top: 70px;
+}
+
+/* ---------- картка фільму ---------- */
+.movie-card {
+  width: 250px;
+  margin: 0 auto; /* центрування всередині колонки */
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+.movie-card img {
+  width: 100%;
+  height: 350px; /* фіксована висота для всіх постерів */
+  object-fit: cover; /* щоб фото не сплющувалось */
+}
+
+.movie-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.favorite-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  margin-left: 10px;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+/* ---------- карусель афіші ---------- */
+.carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  border: none;
+  color: white;
+  font-size: 28px;
+  width: 45px;
+  height: 70px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  z-index: 10;
+}
+
+.arrow-btn:hover:not(:disabled) {
+  background: rgba(0, 0, 0, 0.9);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.arrow-btn:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.arrow-btn.left {
+  left: -10px;
+}
+
+.arrow-btn.right {
+  right: -10px;
+}
